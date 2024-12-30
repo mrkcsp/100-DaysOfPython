@@ -1,4 +1,4 @@
-print("Creiamo il nome per la tua band!")
+print("Creiamo il nome per la tua band, "+ input("Come ti chiami?") + "!")
 citta_nascita = input("Qual'è il nome della tua città di nascita?  ")
 nome_animale = input("Qual'è il nome del tuo animale domestico?  ")
 
