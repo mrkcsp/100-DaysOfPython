@@ -16,6 +16,7 @@ cards = {
     "K": 10,
 }
 
+#need to add blackjack win option (2 card and 21 score)
 
 def score_calculator(cards):
     score = 0
@@ -26,7 +27,7 @@ def score_calculator(cards):
         else:
             score += card[1]
     if ace > 0:
-        for i in range(ace):
+        for _ in range(ace):
             if score + 11 > 21:
                 score += 1
             else:
@@ -72,7 +73,7 @@ def game_logic(card):
                 dealer_cards.append(another_card)
                 print(f"Gets a card, is a {another_card[0]}")
                 dealer_score = score_calculator(dealer_cards)
-                
+
                 if dealer_score > 21:
                     return print("Dealer's bust! You Win!")
                 else:
