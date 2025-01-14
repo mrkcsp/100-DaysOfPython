@@ -1,7 +1,7 @@
 import random
 
 secret = random.randint(1, 100)
-print(secret)
+
 def check_num(attempt, num):
     if num == attempt:
         print(f"Oh yes, it's {num}. You win!")
@@ -12,14 +12,17 @@ def check_num(attempt, num):
     elif num < attempt:
         print("Too high.")
         return False
+    
+def difficulty_selection(diff):
+    if diff.lower() == "easy":
+        return  10
+    elif diff.lower() == "hard":
+        return 5
 
 print("I'm thinking of a number between 1 and 100.")
 difficulty = input("Choose a difficulty. Type 'easy' or 'hard':   ")
-attempts = 0
-if difficulty.lower() == "easy":
-    attempts = 10
-elif difficulty.lower() == "hard":
-    attempts = 5
+attempts = difficulty_selection(difficulty)
+
 
 win = False
 while attempts > 0 and win != True:
