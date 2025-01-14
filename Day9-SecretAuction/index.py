@@ -17,7 +17,13 @@ def bid_system():
     
 def who_wins():
     print("Calculating...")
-    
+    name = ""
+    bid = 0
+    for key, value in bids.items():
+        if value > bid:
+            name = key
+            bid = value
+    return print(f"The winner is {name} with a bid of {bid}$!")
 
 
 more_bis = True
